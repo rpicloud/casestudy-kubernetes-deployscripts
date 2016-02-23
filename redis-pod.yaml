@@ -1,0 +1,17 @@
+kind: Pod
+apiVersion: v1
+id: redis-master
+labels:
+  name: redis
+  role: master
+  visualize: "true"
+desiredState:
+  manifest:
+    version: v1
+    id: redis-master
+    containers:
+      - name: redis-master
+        image: redis
+        ports:
+          - name: redis-server
+            containerPort: 6379
