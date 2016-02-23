@@ -1,0 +1,29 @@
+kind: ReplicationController
+apiVersion: v1
+id: casestudy-gateway
+labels:
+  name: casestudy-gateway
+  visualize: "true"
+desiredState:
+  replicas: 2
+  replicaSelector:
+    name: casestudy-gateway
+  podTemplate:
+    labels:
+      name: casestudy-gateway
+      uses: redis-master
+      visualize: "true"
+    desiredState:
+      manifest:
+        version: v1
+        id: casestudy-gateway
+        labels:
+          name: casestudy-gateway
+          visualize: "true"
+        containers:
+         - name: casestudy-gateway
+           image: rpicloud/casestudy-gateway
+           imagePullPolicy: PullAlways
+           ports:
+            - name: http
+              containerPort: 8080
