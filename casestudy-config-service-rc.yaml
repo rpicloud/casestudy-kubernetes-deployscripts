@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     run: casestudy-config-service
+    visualize: "true"
   name: casestudy-config-service
 spec:
   replicas: 1
@@ -14,6 +15,7 @@ spec:
       creationTimestamp: null
       labels:
         run: casestudy-config-service
+        visualize: "true"
     spec:
       containers:
       - image: rpicloud/casestudy-config-service
