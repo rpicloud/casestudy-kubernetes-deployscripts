@@ -20,6 +20,7 @@ spec:
       containers:
       - image: rpicloud/casestudy-config-service
         name: casestudy-config-service
+        imagePullPolicy: Always
         resources: {}
 status:
   replicas: 0

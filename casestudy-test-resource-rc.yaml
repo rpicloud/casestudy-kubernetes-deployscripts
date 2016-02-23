@@ -22,6 +22,7 @@ spec:
       containers:
       - image: rpicloud/casestudy-test-resource
         name: casestudy-test-resource
+        imagePullPolicy: Always
         resources: {}
 status:
   replicas: 0

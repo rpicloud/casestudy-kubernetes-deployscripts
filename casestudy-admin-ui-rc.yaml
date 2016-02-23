@@ -22,6 +22,7 @@ spec:
       containers:
       - image: rpicloud/casestudy-admin-ui
         name: casestudy-admin-ui
+        imagePullPolicy: Always
         resources: {}
 status:
   replicas: 0
