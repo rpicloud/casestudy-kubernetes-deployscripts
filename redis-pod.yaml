@@ -4,10 +4,12 @@ metadata:
   name: redis
   labels:
     app: redis
+    role: master
     visualize: "true"
 spec:
   containers:
-    - name: redis
+    - name: redis-master
       image: hypriot/rpi-redis
       ports:
-      - containerPort: 6379
+      - name: redis-server  
+        containerPort: 6379
