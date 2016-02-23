@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  creationTimestamp: null
+  labels:
+    run: casestudy-config-service
+  name: casestudy-config-service
+spec:
+  replicas: 1
+  selector:
+    run: casestudy-config-service
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: casestudy-config-service
+    spec:
+      containers:
+      - image: rpicloud/casestudy-config-service
+        name: casestudy-config-service
+        resources: {}
+status:
+  replicas: 0
