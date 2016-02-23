@@ -21,6 +21,7 @@ spec:
       containers:
       - image: rpicloud/casestudy-gateway
         name: casestudy-gateway
+        imagePullPolicy: Always
         resources: {}
 status:
   replicas: 0
