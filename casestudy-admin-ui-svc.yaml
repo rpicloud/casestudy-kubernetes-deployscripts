@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: casestudy-admin-ui
+    visualize: "true"
+  name: casestudy-admin-ui
+spec:
+  externalIPs:
+  - 192.168.1.11
+  ports:
+  - port: 8082
+    protocol: TCP
+    targetPort: 8082
+  selector:
+    run: casestudy-admin-ui
+status:
+  loadBalancer: {}

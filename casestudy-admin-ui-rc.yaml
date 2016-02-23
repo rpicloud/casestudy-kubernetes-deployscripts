@@ -3,26 +3,25 @@ kind: ReplicationController
 metadata:
   creationTimestamp: null
   labels:
-    run: casestudy-gateway
+    run: casestudy-admin-ui
     visualize: "true"
     uses: redis
-  name: casestudy-gateway
+  name: casestudy-admin-ui
 spec:
   replicas: 1
   selector:
-    run: casestudy-gateway
+    run: casestudy-admin-ui
   template:
     metadata:
       creationTimestamp: null
       labels:
-        run: casestudy-gateway
+        run: casestudy-admin-ui
         visualize: "true"
         uses: redis
     spec:
       containers:
-      - image: rpicloud/casestudy-gateway
-        name: casestudy-gateway
-        imagePullPolicy: Always
+      - image: rpicloud/casestudy-admin-ui
+        name: casestudy-admin-ui
         resources: {}
 status:
   replicas: 0

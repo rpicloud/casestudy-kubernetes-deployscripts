@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: casestudy-test-resource
+    visualize: "true"
+  name: casestudy-test-resource
+spec:
+  externalIPs:
+  - 192.168.1.11
+  ports:
+  - port: 9000
+    protocol: TCP
+    targetPort: 9000
+  selector:
+    run: casestudy-test-resource
+status:
+  loadBalancer: {}
