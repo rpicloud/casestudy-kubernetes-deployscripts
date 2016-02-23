@@ -1,5 +1,5 @@
 kind: Pod
-apiVersion: v1beta1
+apiVersion: v1.1
 id: redis-master
 labels:
   name: redis
@@ -7,7 +7,7 @@ labels:
   visualize: "true"
 desiredState:
   manifest:
-    version: v1beta1
+    version: v1.1
     id: redis-master
     containers:
       - name: redis-master
