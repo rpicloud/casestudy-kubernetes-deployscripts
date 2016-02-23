@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  creationTimestamp: null
+  labels:
+    run: casestudy-gateway
+    visualize: "true"
+    uses: redis
+  name: casestudy-gateway
+spec:
+  replicas: 1
+  selector:
+    run: casestudy-gateway
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: casestudy-gateway
+        visualize: "true"
+    spec:
+      containers:
+      - image: rpicloud/casestudy-gateway
+        name: casestudy-gateway
+        resources: {}
+status:
+  replicas: 0
