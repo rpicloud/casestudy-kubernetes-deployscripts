@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: casestudy-config-service
+    run: casestudy-config-service
     visualize: "true"
   name: casestudy-config-service
 spec:
@@ -13,6 +13,6 @@ spec:
     protocol: TCP
     targetPort: 8888
   selector:
-    app: casestudy-config-service
+    run: casestudy-config-service
 status:
   loadBalancer: {}

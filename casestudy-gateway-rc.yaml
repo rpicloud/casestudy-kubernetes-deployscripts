@@ -24,5 +24,3 @@ spec:
         name: casestudy-gateway
         imagePullPolicy: Always
         resources: {}
-status:
-  replicas: 0
